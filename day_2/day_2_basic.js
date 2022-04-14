@@ -1,4 +1,4 @@
-console.log('Day_2 excercise - Basic')
+console.log('Day_2 exercise - Basic')
 //Exercise LVL 1 - basic
 
 // Exercise - 1
@@ -173,7 +173,7 @@ const remove_white_space = ' 30 Days Of JavaScript '
 //string.match(pattern) is used to find some kind of words with pattern starts and ends with */* 
 //after first slash (/) use a expresion you want to find
 // then after the last slash (/) you can add a flag
-//Flags:
+//***Flags after first slash (/):
 //g: means to search in whole text
 //i: means is insensitive  
 
@@ -209,4 +209,4 @@ const string_2 = 'JavaScript'
 //Exercise - 25
 // Use repeat() method to print 30 Days Of JavaScript 2 times
 
-console.log(challenge.repeat(2)) //R--> 30 Days Of JavaScript30 Days Of JavaScript
+//console.log(challenge.repeat(2)) //R--> 30 Days Of JavaScript30 Days Of JavaScript

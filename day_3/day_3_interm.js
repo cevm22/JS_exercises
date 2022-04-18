@@ -279,8 +279,11 @@ function Exercise_in_15(){
 // YYY-MM-DD HH:mm eg. 20120-01-02 07:05
 
 function doble_digit(digit){
-    if (digit.length == 1){
-        return (parse)
+    let digit_str = digit.toString()
+    if (digit_str.length == 1){
+        return ('0' + digit_str) //retornar 0 adicional en caso de que sea un solo digito pendiente
+    }else{
+        return digit_str
     }
 
 }
@@ -288,14 +291,16 @@ function doble_digit(digit){
 function Exercise_ad_1(){
     const now = new Date()
     const year = now.getFullYear() // return year
-    const month = now.getMonth() + 1 // return month(0 - 11)
-    const date = now.getDate() // return date (1 - 31)
-    const hours = now.getHours() // return number (0 - 23)
-    const minutes = now.getMinutes() // return number (0 -59)
+    const month = doble_digit(now.getMonth() + 1) // return month(0 - 11)
+    const date = doble_digit(now.getDate()) // return date (1 - 31)
+    const hours = doble_digit(now.getHours()) // return number (0 - 23)
+    const minutes = doble_digit(now.getMinutes()) // return number (0 -59)
 
 
+    console.log(`${year}-${month}-${date} ${hours}:${minutes}`) //2022-04-18 18:54
 
-    console.log(`${year}-${month}-${date} ${hours}:${minutes}`)
-    console.log(`${date}-${month}-${year} ${hours}:${minutes}`)
-    console.log(`${date}/${month}/${year} ${hours}:${minutes}`)    // 4/1/2020 0:56  
 }
+
+
+Exercise_ad_1()
+

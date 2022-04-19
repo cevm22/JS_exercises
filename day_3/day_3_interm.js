@@ -302,5 +302,5 @@ function Exercise_ad_1(){
 }
 
 
-Exercise_ad_1()
+//Exercise_ad_1()
 

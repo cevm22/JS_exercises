@@ -155,3 +155,8 @@ function calculateAge(birthYear, currentYear = 2019) {
   }
   
   console.log('Age: ', calculateAge(1819))
+
+
+// with arrow function
+const calculateAge = (birthYear, currentYear = 2019) => currentYear - birthYear
+console.log('Age: ', calculateAge(1819))

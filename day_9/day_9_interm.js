@@ -150,4 +150,4 @@ function Exercise_int_7(){
     console.log(new_object)
 }
 
-Exercise_int_7()
+//Exercise_int_7()

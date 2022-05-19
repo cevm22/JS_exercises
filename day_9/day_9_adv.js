@@ -67,9 +67,10 @@ function Exercise_adv_2(number){
     //give the array length according the input
     let answer = temporal.slice(0,number)
     console.log(answer)
+    console.log(total_lang) //112
 }
 
-//Exercise_adv_2(3)
+Exercise_adv_2(10)
 
 //======================================================
 // Exercise - 3

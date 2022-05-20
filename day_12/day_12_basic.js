@@ -39,7 +39,7 @@ function Exercise_2(){
 
 // Write a function called tenMostFrequentWords which get the ten most frequent word from a string?
 
-function Exercise_adv_123(number){
+function Exercise_adv_1(number){
     const paragraph = `I love teaching. If you do not love teaching what else can you love. I love Python if you do not love something which can give you all the capabilities to develop an application what else can you love.`
 
     const pattern = /\./gi
@@ -79,4 +79,38 @@ function Exercise_adv_123(number){
     console.log(answer.slice(0,number))
 
 }
-Exercise_adv_123(3)
+//Exercise_adv_1(3)
+
+function Exercise_adv_2(number){
+    const sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?`
+
+    // this character > (^) means Negation, so in the following pattern, it says all characters except alphabet and dot
+    //also (g) for all the sentence and (i) ignoring the capital letters
+    const pattern = /[^a-z' ']/gi
+    let clear= sentence.replace(pattern,'')
+    console.log(clear)
+
+
+    let to_arr = clear.split(' ')
+    console.log(to_arr)
+
+    let temporal = []
+    let answer = []
+
+    to_arr.forEach(function(element){
+        if(!temporal.includes(element)){
+            temporal.push(element)
+            answer.push({
+                'word':element,
+                'count':1
+            })
+        }else{
+            let index = answer.findIndex((x)=>x.word==element)
+            answer[index].count += 1
+        }
+    })
+    answer.sort((a,b)=> b['count']-a['count'])
+    
+    console.log(answer.slice(0,number))
+}
+//Exercise_adv_2(5)
